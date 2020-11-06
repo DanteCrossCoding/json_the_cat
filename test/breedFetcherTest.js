@@ -11,18 +11,17 @@ describe('#fetchBreedDescription', () => {
 
       
       assert.equal(expectedDesc, desc.trim());
-        done();
-    })
-  })
-  it ("#should return 'That is not a cat' if invalid cat breed is entered", (done) => {
-      fetchBreedDescription('lizard', (err, desc) => {
+      done();
+    });
+  });
+  it("#should return 'That is not a cat' if invalid cat breed is entered", (done) => {
+    fetchBreedDescription('lizard', (err, desc) => {
 
-        // assert.equal(err, null);
+       
+      assert.equal(null, desc);
         
-        assert.equal(null, desc);
-        
-        done();
+      done();
       
-    }); 
+    });
   });
 });
